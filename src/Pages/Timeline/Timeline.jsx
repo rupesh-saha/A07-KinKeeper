@@ -12,7 +12,7 @@ const Timeline = () => {
 
 
   return (
-    <div className="max-w-[85%] mx-auto mt-12 md:mt-18">
+    <div className="max-w-[95%] md:max-w-[85%] mx-auto mt-12 md:mt-18">
       
       <h1 className="text-5xl font-bold text-[#1F2937] mb-2.5">Timeline</h1>
 
