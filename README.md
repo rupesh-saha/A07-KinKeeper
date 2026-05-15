@@ -1,16 +1,28 @@
-# React + Vite
+KeenKeeper
+Your personal shelf of meaningful connections.
+KeenKeeper is a relationship management dashboard designed to help users browse, tend, and nurture the relationships that matter most. It provides a visual way to track when you last spoke to friends, set relationship goals, and maintain a consistent history of interactions.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🛠️ Technologies Used
+Frontend Library: React (Vite)
 
-Currently, two official plugins are available:
+Styling: Tailwind CSS & DaisyUI
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Routing: React Router DOM
 
-## React Compiler
+State Management: React Context API (FriendProvider)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Icons: Lucide-React & Custom SVGs
 
-## Expanding the ESLint configuration
+Data Visualization: Recharts (Donut Charts)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Notifications: React Toastify
+
+🚀 Key Features
+1. Smart Connection Management
+The dashboard displays a comprehensive list of friends via a 4-column grid. Each card features high-fidelity avatars, contact tags (e.g., Work, Family), and dynamic status badges (Overdue, Almost Due, On-Track) that change color based on the user's interaction history.
+
+2. One-Click Interaction Tracking
+Users can perform "Quick Check-Ins" directly from a friend's detail page. Buttons for Call, Text, and Video Chat automatically log the event with a specific icon, friend name, and localized timestamp, ensuring your social history is never lost.
+
+3. Visual Relationship Analytics
+Integrates Recharts to provide a "By Interaction Type" analytics view. The interactive donut chart features modern capsule-shaped slices with rounded corners and gaps, allowing users to see at a glance whether they communicate more via text, voice, or video.
