@@ -19,7 +19,7 @@ const FriendCard = ({friend}) => {
 
 
   return (
-    <Link className="card bg-white shadow-sm border border-gray-50 hover:shadow-md transition-shadow py-10 items-center text-center rounded-2xl">
+    <Link to={`/friendDetail/${friend.id}`} className="card bg-white shadow-sm border border-gray-50 hover:shadow-md transition-shadow py-10 items-center text-center rounded-2xl">
       <figure className="mb-4">
         <img
           src={friend.picture}
