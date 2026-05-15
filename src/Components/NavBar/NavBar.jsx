@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router';
+import { Link, NavLink } from 'react-router';
 import { Home, Clock, BarChart2 } from 'lucide-react';
 
 const NavBar = () => {
@@ -32,7 +32,7 @@ const NavBar = () => {
             {Links}
           </ul>
         </div>
-        <a className="btn btn-ghost text-2xl md:text-3xl font-extrabold text-[#1F2937]">Keen<span className="text-[#244D3F]">Keeper</span></a>
+        <Link to={'/'} className="btn btn-ghost text-2xl md:text-3xl font-extrabold text-[#1F2937]">Keen<span className="text-[#244D3F]">Keeper</span></Link>
       </div>
 
       <div className="navbar-end hidden md:flex">
