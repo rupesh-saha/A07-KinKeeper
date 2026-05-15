@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link, useLoaderData, useParams } from 'react-router';
 import { Bell, Archive, Trash2, Phone, MessageSquare, Video } from 'lucide-react';
+import { useContext } from 'react';
+import { FriendContext } from '../../Context/FriendProvider';
 
 const FriendDetail = () => {
   const {id} = useParams();
@@ -8,6 +10,8 @@ const FriendDetail = () => {
   const friends = useLoaderData();
 
   const expectedFriend = friends.find(friend => friend.id == id);
+
+  const {handleTimeline} = useContext(FriendContext);
 
   let statusClasses = "";
 
@@ -104,15 +108,15 @@ const FriendDetail = () => {
           <div className="card bg-white shadow-sm border border-gray-100 p-8">
             <h3 className="text-lg font-bold text-[#1F2937] mb-6">Quick Check-In</h3>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              <button className="flex flex-col items-center justify-center gap-3 p-3 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors border border-transparent hover:border-gray-200">
+              <button onClick={() => handleTimeline(expectedFriend, "call")} className="flex flex-col items-center justify-center gap-3 p-3 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors border border-transparent hover:border-gray-200">
                 <Phone size={28} className="text-[#1F2937]" />
                 <span className="font-medium">Call</span>
               </button>
-              <button className="flex flex-col items-center justify-center gap-3 p-3 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors border border-transparent hover:border-gray-200">
+              <button onClick={() => handleTimeline(expectedFriend, "text")} className="flex flex-col items-center justify-center gap-3 p-3 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors border border-transparent hover:border-gray-200">
                 <MessageSquare size={28} className="text-[#1F2937]" />
                 <span className="font-medium">Text</span>
               </button>
-              <button className="flex flex-col items-center justify-center gap-3 p-3 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors border border-transparent hover:border-gray-200">
+              <button onClick={() => handleTimeline(expectedFriend ,"video")} className="flex flex-col items-center justify-center gap-3 p-3 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors border border-transparent hover:border-gray-200">
                 <Video size={28} className="text-[#1F2937]" />
                 <span className="font-medium">Video</span>
               </button>
